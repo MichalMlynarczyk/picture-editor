@@ -1,0 +1,146 @@
+:root{
+  --fontColorSingle: "#808080";
+  --fontColorDouble: "#808080";
+}
+
+.settings{
+  width: 100%;
+  height: 10%;
+  margin-top: 10%;
+}
+
+.settingsButton{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  background-color: rgb(63, 49, 49);
+  opacity: 80%;
+  width: 80%;
+  height: 100%;
+  margin-left: 5%;
+  cursor: pointer;
+  color: antiquewhite;
+}
+
+.settingsButton:hover{
+  box-shadow: 0 0 5px #f00, 0 0 10px #f00, 0 0 15px #f00, 0 0 20px #f00, 0 0 35px #f00, 0 0 40px #f00, 0 0 50px #f00, 0 0 75px #f00;
+}
+
+.dialog {
+  display: none;
+  position: fixed; 
+  top: 0;
+  left: 0; 
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.482);
+}
+
+.dialog-content {
+  min-width: 300px;
+  min-height: 450px;
+  padding-top: 10px;
+  background-color: rgb(222, 222, 222);
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 30%;
+  max-height: 100%;
+  height: 60%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+}
+
+#error_msg{
+  font-family: 'Montserrat', sans-serif;
+  color: red;
+  position: absolute;
+  bottom: 70px;
+  text-align: center; 
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.open {
+  display: block;
+}
+
+.close-dialog-btn {
+  /* margin-top: 50%; */
+  background-color: #ccc;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  position: absolute;
+  /* top: 50%; */ 
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, -50%); 
+  text-align: center;
+}
+
+.RGB_options{
+  text-align: left;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.div_1{
+  padding: 5px;
+  background-color: rgb(175, 175, 175);
+  width: 90%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  margin-left: 5%;
+  text-align: center;
+}
+
+.div_2{
+  margin-top: 20px;
+  margin-left: 30px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ccc;
+}
+
+.div_4{
+  margin-top: 20px;
+  margin-left: 30px;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ccc;
+}
+
+.single{
+  float: left;
+  width: 15px;
+  height: 15px;
+}
+
+.label_1{
+  margin-left: 10px;
+}
+
+.div_3{
+  margin-top: 20px;
+  margin-left: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.div_5{
+  margin-top: 20px;
+  margin-left: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.CB_single{
+  color: var(--fontColorSingle);
+}
+
+.CB_double{
+  color: var(--fontColorDouble);
+}

@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Our Funky HTML Page</title>
+  <!-- załączenie plików CSS --> 
+  <link rel="stylesheet" href="../static/styles/mainWindowStyle.css" id="BGstylesheet" > 
+  <link rel="stylesheet" href="../static/styles/sliders.css">
+  <link rel="stylesheet" href="../static/styles/audio.css">
+  <link rel="stylesheet" href="../static/styles/tools.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="../static/styles/settingsButton.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+ <!-- ////////////////////// -->
+ <!-- ////////////////////// -->
+ <!-- ////////////////////// -->
+ <script> function loadPage() { } </script>
+<!-- ////////////////////// -->
+ <body onload="loadPage()">
+  <!-- BACKGROUND IMAGE -->
+  <img src = "../static/images/Backgound.jpg" id="BGimg"> 
+  
+  <!-- MUSIC PART -->
+  <div class="musicON"> 
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <span class="material-symbols-outlined" style="font-size:75px;" id="musicButton" onclick="_turnTheMusic()">
+      play_arrow
+    </span>
+  </div>
+
+  <!-- MAIN PAGE -->
+  <div class="wrapper" id="wrapper">
+   <!-- REGULOWANIE WARTOŚCI RGB -->
+    <div class="sliderSection" id="sliderSection" style="position: relative;">
+    <!-- USTWIENIA -->
+      <div class="settings" id="settings">
+        <button type="button" class="settingsButton" id="settingsButton">SETTINGS</button>
+      </div>
+
+    <!-- SETTINGS WINDOW-->
+    <div id="dialog" class="dialog">
+      <div class="dialog-content">
+        <div class="div_1">
+          <label class="RGB_options" id="RGB_options"> Choose RGB options: </label>
+        </div>
+
+        <div class="div_2">
+          <input type="checkbox" id="single" class="single">
+          <label class="label_1"> Single RGB component: </label>
+        </div>
+
+        <div class="div_3">
+          <div>
+            <input type="checkbox" id="CB_single_R" disabled="true">
+            <label class="CB_single">component R</label>
+          </div>
+          <div>
+            <input type="checkbox" id="CB_single_G" disabled="true">
+            <label class="CB_single">component G</label>
+          </div>
+          <div>
+            <input type="checkbox" id="CB_single_B" disabled="true">
+            <label class="CB_single">component B</label>
+          </div>
+        </div>
+
+        <div class="div_4">
+          <input type="checkbox" id="CB_doubleRGBcomponent">
+          <label class="CB_doubleRGBcomponent"> Double RGB component: </label>
+        </div>
+
+        <div class="div_5">
+          <div>
+            <input type="checkbox" id="CB_double_R" disabled="true">
+            <label class="CB_double">component R</label>
+          </div>
+          <div>
+            <input type="checkbox" id="CB_double_G" disabled="true">
+            <label class="CB_double">component G</label>
+          </div>
+          <div>
+            <input type="checkbox" id="CB_double_B" disabled="true">
+            <label class="CB_double">component B</label>
+          </div>
+        </div>
+       
+        <label id="error_msg" style="visibility: hidden;" >You need to select the appropriate number of components!</label>
+
+        <button class="close-dialog-btn" id="close-dialog-btn">Save</button>
+      </div>
+    </div>
+
+    <!-- SLIDERS -->
+
+    <!--SLIDER 1-->
+      <div>
+        <input type="range" min="0" max="255" value="50" id="slider_1" class="slider_1">
+       <!-- <label for="html" id="label_1" >50</label><br> -->
+      </div>
+    <!--SLIDER 2-->
+      <div>
+        <input type="range" min="0" max="255" value="50" id="slider_2" class="slider_2" style="visibility: hidden;" disabled="true">
+        <!-- <label for="html" id="label_2">50</label><br> -->
+      </div>
+
+    <!--SLIDER 3-->
+      <div class="qualitySlider">
+        <label for="html" id="label_3">Set quality</label><br>
+        <input type="range" min="1" max="5" value="0" id="slider_3" class="slider_3">
+       <!-- <label for="html" id="label_3">50</label><br> -->
+      </div>
+
+    <!-- REFRESH BUTTON -->
+    <div id="refresh_div">
+      <button type="button" class="refresh" id="refresh">REFRESH PICTURE</button>
+    </div>
+
+    <!-- RELOAD -->
+    <div id="reload_div">
+      <button type="button" class="reload" id="reload">RELOAD PICTURE</button>
+    </div>
+
+    <!-- BLUR -->
+    <div class="blur">
+      <label id="blur">BLUR</label>
+      <label class="toggle-switch">
+        <input id="CB_blur" type="checkbox">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <!-- NEGATIVE -->
+    <div class="negative">
+      <label id="neg">NEGAT</label>
+      <label class="toggle-switch">
+        <input type="checkbox" id="CB_neg">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <!-- CTR -->
+    <div class="ctr">
+      <label id="ctr">CTR</label>
+      <label class="toggle-switch">
+        <input id="CB_ctr" type="checkbox">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    <!-- NOISE -->
+    <div class="noise">
+      <label id="noise">NOISE</label>
+      <label class="toggle-switch">
+        <input id="CB_noise" type="checkbox">
+        <span class="switch"></span>
+      </label>
+    </div>
+
+    </div>
+    
+    <!-- USER PICTURE -->
+    <div class="pictureSection" id="pictureSection">
+      <div>
+        <img src = "../static/images/UserImage.jpg" class="Uimg" id = "Uimg">
+      </div>
+    </div>
+
+  </div>
+
+  <!-- załączenie plików JS --> 
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>     <!--biblioteka jquery-->
+  <script type="module" type="text/javascript" src ="../static/js/Picture_control.js"></script>
+  <script type="module" src="../static/js/RGB_value_control.js"></script>
+  <script type="text/javascript" src ="../static/js/Background_control.js"></script>
+  <script type="text/javascript" src ="../static/js/Audio_control.js"></script>
+  <script type="module" type="text/javascript" src ="../static/js/tools.js"></script>
+  <script type="module" type="text/javascript" src ="../static/js/Settings_control.js"></script>
+ </body>
+ <!-- ////////////////////// -->
+ <!-- ////////////////////// -->
+ <!-- ////////////////////// -->
+</html>
